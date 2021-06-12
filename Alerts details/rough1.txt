@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <script type="text/javascript" src="data.json"></script>
+    <!-- <script type="text/javascript" src="app.js"></script> -->
+    <title>Alert Details</title>
+</head>
+<body>
+    <!-- <a href=" ">
+        <div class="back">
+            << back to Home
+        </div>
+    </a> -->
+    <div class="main_body">
+        <h1>Error Report on date: 11/06/2021</h1>
+        <div class="container">
+            <div class="holder">
+                <div class="picture">
+                    <!-- <img src="https://github.com/Khem112/pictures/blob/master/p1.png?raw=true" alt="Screenshot of Website is loading" width="250px" height="250px" class="image">
+                    <a href="https://zpnilgavhan.github.io/edu/"> -->
+                        <div class="overlay">
+                            <div class="text">Go to Website</div>
+                          </div>
+                    <!-- </a> -->
+                </div>
+            </div>
+            
+            <div class="holder">
+                <div class="picture">
+                    <!-- <img src="https://github.com/Khem112/pictures/blob/master/p2.png?raw=true" alt="Screenshot of Smart Contract is loading" width="250px" height="250px" class="image">
+                    <a href="https://zpnilgavhan.github.io/rem/"> -->
+                        <div class="overlay">
+                            <div class="text">Check Out Smart Contract</div>
+                        </div>
+                <!-- <div class="pname">
+                    <h1>School Website</h1>
+                    <div class="pinfo">
+                        Digitalized school</br>
+                        Easily checking of result,attendance and school-committees
+                    </div>
+                    <div class="skills">
+                        <div class="skill">
+                            HTML
+                        </div>
+                        <div class="skill">
+                            CSS
+                        </div>
+                        <div class="skill">
+                            Javascript
+                        </div>
+                        <div class="skill">
+                            Git-Hub
+                        </div>
+                    </div>
+                </div> 
+                    </a> -->
+                </div>
+
+            </div>
+
+            <div class="holder">
+                <div class="picture">
+                    <!-- <img src="https://github.com/Khem112/pictures/blob/master/p4.png?raw=true" alt="Screenshot of Terminal is loading" width="250px" height="250px" class="image">
+                    <a href="https://github.com/Khem112/Secure-Login-Using-SHA-256"> -->
+                        <div class="overlay">
+                            <div class="text">Check Code files on</br>github</div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="holder">
+                <div class="picture">
+                    <!-- <img src="https://github.com/Khem112/pictures/blob/master/p3.png?raw=true" alt="Screenshot of App is loading" width="250px" height="250px" class="image">
+                    <a href="https://drive.google.com/file/d/1MXyUVBPtLt6umhtw8TCjK9q7xh_Hh-W7/view?usp=drivesdk"> -->
+                        <div class="overlay">
+                            <div class="text">Get the apk file here</div>
+                        </div>
+                    </a>
+                </div>
+   
+            </div>
+             
+        <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="main_body"> -->
+        <!-- <h1>Team Projects</h1> -->
+        <!-- <div class="container"> -->
+            <div class="holder">
+                <div class="picture">
+                    <!-- <img src="https://github.com/Khem112/pictures/blob/master/p5.png?raw=true" alt="ER-diagram of Database Project" width="250px" height="250px" class="image">-->
+                    <div class="overlay"> 
+                      <div class="text">College Project</div>
+                    </div>
+                </div>
+        
+            </div>
+            
+            <div class="holder">
+                <div class="picture">
+                    <!-- <img src="https://github.com/Khem112/Dev-Attendance/blob/master/screenshots/device-2017-04-21-154810.png?raw=true" alt="Screenshot of App is loading" width="250px" height="250px" class="image">
+                    <a href="https://github.com/Khem112/Dev-Attendance"> -->
+                        <div class="overlay">
+                            <div class="text">Get the code on github</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+             
+        </div>
+    </div>
+    
+    
+</body>
+</html>
+<script>
+//  var mydata = JSON.parse(data);
+console.log(data)
+const num=data.length
+console.log(num)
+const c = document.querySelector('.container')
+console.log(c)
+for(let i=0;i<num;i++){
+    console.log(i)
+    let hold = document.createElement('div')
+    // square.setAttribute('id', i) //sets the id of the square div as i
+    hold.classList.add('holder') //adds a class to the current  div
+    let pic=document.createElement('div')
+    pic.classList.add('picture') //adds a class to the current  div
+    // pic.innerHTML=`element ${i}`
+    let pname=document.createElement('div')
+    pname.classList.add('alert')
+    pname.innerHTML=`<h1>${data[i].alert}</h1>`
+    pic.appendChild(pname)
+
+    let over=document.createElement('div')
+    over.classList.add('overlay') 
+    // let txt=document.createElement('div')
+    let txt=document.createElement('ul')
+    txt.classList.add('text') 
+    
+    let cities=data[i].cities
+    // const myArray = JSON.parse(cities)
+    console.log(cities)
+    for(let i=0;i<cities.length;i++){
+        // let li=document.createElement('li')
+        // if(cities[i]!=='[' & cities[i]!==']' & cities[i]!==',')
+        txt.innerHTML+=`<li>${cities[i]}</li>`
+    }
+    
+
+    over.appendChild(txt)
+    pic.appendChild(over)
+    hold.appendChild(pic)
+    c.appendChild(hold)
+}
+// console.log(data[0].name);
+// console.log(data[0].age);
+// console.log(mydata[1].name);
+// console.log(mydata[1].age);
+</script>
+
+
